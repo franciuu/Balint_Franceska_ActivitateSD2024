@@ -158,7 +158,7 @@ void salvareVectorFisier(const char* numeFisier, struct Fabrica* fabrici, int di
         }
     }
 }
-void swap(struct Fabrica** a, struct Fabrica*** b, int* nrColoaneA, int* nrColoaneB) {
+void swap(struct Fabrica** a, struct Fabrica** b, int* nrColoaneA, int* nrColoaneB) {
     struct Fabrica* aux = *a;
     *a = *b;
     *b = aux;
