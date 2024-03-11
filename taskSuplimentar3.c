@@ -39,7 +39,7 @@ void afisareVectorFabrici(struct Fabrica* fabrici, int dim)
 	for (int i = 0; i < dim; ++i)
 		afisareFabrica(fabrici[i]);
 }
-void inserareFarmacie(struct Fabrica** vector, int* dim, struct Fabrica f)
+void inserareFabrica(struct Fabrica** vector, int* dim, struct Fabrica f)
 {
 	struct Fabrica* copie;
 	copie = malloc(sizeof(struct Fabrica) * (++(*dim)));
@@ -78,7 +78,7 @@ struct Fabrica* citireFisier(const char* numeFisier, int* nrFabrici)
 				}
 				token = strtok(NULL, delim);
 				fabrica.anInfiintare = atoi(token);
-				inserareFarmacie(&fabrici, nrFabrici, fabrica);
+				inserareFabrica(&fabrici, nrFabrici, fabrica);
 			}
 			fclose(f);
 			return fabrici;
