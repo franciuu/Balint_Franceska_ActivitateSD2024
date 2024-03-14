@@ -132,12 +132,9 @@ void afisareMatrice(struct Locuinta** mat, int nrLinii, int* nrColoane)
 void afisareIdDePeOParte(int paritate, struct Locuinta** matrice, int nrLinii, int* nrColoane)
 {
 	paritate = paritate % 2;
-	for (int i = 0; i < nrLinii; ++i)
+	for(int j = 0; j < nrColoane[paritate]; ++j)
 	{
-		for(int j = 0; j < nrColoane[i]; ++j)
-		{
-			printf("%d ", matrice[i][j].id);
-		}
+		printf("%d ", matrice[paritate][j].id);
 	}
 }
 //cautare locuinta dupa id
